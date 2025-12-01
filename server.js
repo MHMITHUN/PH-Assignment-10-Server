@@ -25,14 +25,21 @@ const client = new MongoClient(uri, {
 let db;
 let tipsCollection;
 let gardenersCollection;
+let isConnected = false;
 
 async function connectDB() {
+    if (isConnected) {
+        console.log('Using existing database connection');
+        return;
+    }
+
     try {
         console.log('🔄 Connecting to MongoDB...');
         await client.connect();
         db = client.db('gardening-hub');
         tipsCollection = db.collection('tips');
         gardenersCollection = db.collection('gardeners');
+        isConnected = true;
         console.log('══════════════════════════════════════════════════');
         console.log('✅ Successfully connected to MongoDB!');
         console.log('📦 Database: gardening-hub');
@@ -45,12 +52,12 @@ async function connectDB() {
         console.error('💡 URI should end with: &tlsAllowInvalidCertificates=true');
         console.log('══════════════════════════════════════════════════');
         console.error('Error:', error.message);
-        process.exit(1);
+        throw error; // Don't exit in serverless
     }
 }
 
-// Connect to database
-connectDB();
+// Connect to database on module load
+connectDB().catch(console.error);
 
 // Root route
 app.get('/', (req, res) => {
