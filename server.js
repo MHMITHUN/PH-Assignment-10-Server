@@ -237,10 +237,12 @@ app.get('/api/gardeners/active', async (req, res) => {
     }
 });
 
-// Start server
-app.listen(port, () => {
-    console.log(`🌱 Gardening Hub API running on port ${port}`);
-});
+// Start server (Only if not running on Vercel)
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(port, () => {
+        console.log(`🌱 Gardening Hub API running on port ${port}`);
+    });
+}
 
 // Graceful shutdown
 process.on('SIGINT', async () => {
@@ -248,3 +250,5 @@ process.on('SIGINT', async () => {
     console.log('MongoDB connection closed');
     process.exit(0);
 });
+
+export default app;
