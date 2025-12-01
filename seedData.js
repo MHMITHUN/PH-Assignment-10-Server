@@ -14,104 +14,104 @@ const client = new MongoClient(uri, {
 
 const gardenerProfiles = [
     {
-        name: "Sarah Johnson",
-        age: 34,
-        gender: "Female",
-        status: "Active",
-        experience: "8 years",
-        imageUrl: "https://randomuser.me/api/portraits/women/1.jpg",
-        totalSharedTips: 45,
-        bio: "Passionate about organic vegetable gardening and composting. Love sharing tips on balcony gardens!"
-    },
-    {
-        name: "Michael Chen",
-        age: 42,
+        name: "আব্দুল করিম (Abdul Karim)",
+        age: 45,
         gender: "Male",
         status: "Active",
-        experience: "12 years",
-        imageUrl: "https://randomuser.me/api/portraits/men/2.jpg",
-        totalSharedTips: 62,
-        bio: "Hydroponics enthusiast and indoor gardening expert. Always experimenting with new techniques."
+        experience: "15 years",
+        imageUrl: "https://randomuser.me/api/portraits/men/32.jpg",
+        totalSharedTips: 67,
+        bio: "Organic vegetable gardening expert from Dhaka. Specializes in rooftop gardens and home composting."
     },
     {
-        name: "Emily Rodriguez",
-        age: 28,
+        name: "ফাতেমা খাতুন (Fatema Khatun)",
+        age: 38,
         gender: "Female",
         status: "Active",
-        experience: "5 years",
-        imageUrl: "https://randomuser.me/api/portraits/women/3.jpg",
-        totalSharedTips: 31,
-        bio: "Specializing in vertical gardens and space-saving techniques for small apartments."
+        experience: "12 years",
+        imageUrl: "https://randomuser.me/api/portraits/women/44.jpg",
+        totalSharedTips: 54,
+        bio: "Passionate about flower gardening and balcony gardens. Grows seasonal vegetables in limited spaces."
     },
     {
-        name: "David Thompson",
-        age: 55,
+        name: "রহিম উদ্দিন (Rahim Uddin)",
+        age: 52,
         gender: "Male",
         status: "Active",
         experience: "20+ years",
-        imageUrl: "https://randomuser.me/api/portraits/men/4.jpg",
+        imageUrl: "https://randomuser.me/api/portraits/men/45.jpg",
         totalSharedTips: 89,
-        bio: "Retired botanist with a passion for native plants and sustainable gardening practices."
+        bio: "Traditional farming methods combined with modern techniques. Fruit tree cultivation specialist."
     },
     {
-        name: "Lisa Patel",
-        age: 31,
+        name: "নাসরিন সুলতানা (Nasrin Sultana)",
+        age: 35,
         gender: "Female",
-        status: "Active",
-        experience: "7 years",
-        imageUrl: "https://randomuser.me/api/portraits/women/5.jpg",
-        totalSharedTips: 38,
-        bio: "Herb garden specialist. Love teaching beginners about growing herbs in small spaces."
-    },
-    {
-        name: "James Wilson",
-        age: 39,
-        gender: "Male",
         status: "Active",
         experience: "10 years",
-        imageUrl: "https://randomuser.me/api/portraits/men/6.jpg",
-        totalSharedTips: 54,
-        bio: "Container gardening expert and pest control advocate using natural methods."
+        imageUrl: "https://randomuser.me/api/portraits/women/50.jpg",
+        totalSharedTips: 48,
+        bio: "Indoor plant enthusiast from Chittagong. Expert in growing herbs and medicinal plants at home."
     },
     {
-        name: "Amanda Foster",
-        age: 26,
+        name: "হাসান আলী (Hasan Ali)",
+        age: 41,
+        gender: "Male",
+        status: "Active",
+        experience: "14 years",
+        imageUrl: "https://randomuser.me/api/portraits/men/55.jpg",
+        totalSharedTips: 62,
+        bio: "Hydroponic farming pioneer in Bangladesh. Teaches modern urban gardening techniques."
+    },
+    {
+        name: "শাহনাজ আক্তার (Shahnaz Akhter)",
+        age: 29,
         gender: "Female",
-        status: "Inactive",
-        experience: "3 years",
-        imageUrl: "https://randomuser.me/api/portraits/women/7.jpg",
-        totalSharedTips: 18,
-        bio: "Beginner-friendly tips for succulent care and low-maintenance plants."
+        status: "Active",
+        experience: "6 years",
+        imageUrl: "https://randomuser.me/api/portraits/women/60.jpg",
+        totalSharedTips: 39,
+        bio: "Young gardening enthusiast promoting eco-friendly practices and vertical gardens in Sylhet."
     },
     {
-        name: "Robert Martinez",
+        name: "মোস্তফা কামাল (Mostafa Kamal)",
         age: 48,
         gender: "Male",
         status: "Inactive",
-        experience: "15 years",
-        imageUrl: "https://randomuser.me/api/portraits/men/8.jpg",
-        totalSharedTips: 67,
-        bio: "Fruit tree cultivation and seasonal planting strategies expert."
+        experience: "16 years",
+        imageUrl: "https://randomuser.me/api/portraits/men/62.jpg",
+        totalSharedTips: 71,
+        bio: "Seasonal vegetable farming expert. Focuses on pesticide-free organic produce."
     },
     {
-        name: "Jennifer Lee",
-        age: 37,
+        name: "রুমানা আহমেদ (Rumana Ahmed)",
+        age: 33,
         gender: "Female",
         status: "Inactive",
-        experience: "9 years",
-        imageUrl: "https://randomuser.me/api/portraits/women/9.jpg",
-        totalSharedTips: 42,
-        bio: "Flower garden designer with focus on pollinator-friendly landscapes."
+        experience: "8 years",
+        imageUrl: "https://randomuser.me/api/portraits/women/65.jpg",
+        totalSharedTips: 43,
+        bio: "Container gardening specialist from Rajshahi. Loves growing flowers and ornamental plants."
     },
     {
-        name: "Christopher Brown",
-        age: 44,
+        name: "জাহিদ হোসেন (Zahid Hossain)",
+        age: 56,
         gender: "Male",
         status: "Inactive",
-        experience: "11 years",
-        imageUrl: "https://randomuser.me/api/portraits/men/10.jpg",
-        totalSharedTips: 51,
-        bio: "Soil health and composting systems specialist for urban gardeners."
+        experience: "22 years",
+        imageUrl: "https://randomuser.me/api/portraits/men/70.jpg",
+        totalSharedTips: 78,
+        bio: "Experienced farmer and gardening mentor. Specializes in mango and jackfruit cultivation."
+    },
+    {
+        name: "সাবিনা ইয়াসমিন (Sabina Yasmin)",
+        age: 31,
+        gender: "Female",
+        status: "Inactive",
+        experience: "7 years",
+        imageUrl: "https://randomuser.me/api/portraits/women/72.jpg",
+        totalSharedTips: 36,
+        bio: "Balcony garden designer from Khulna. Promotes sustainable gardening in urban apartments."
     }
 ];
 
